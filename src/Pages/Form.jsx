@@ -74,6 +74,35 @@ const Form = () => {
   const [valueDob, setValueDob] = useState(null);
   const [valueApt, setValueApt] = useState(null);
 
+  const defaultValues = {
+    patientPhone: "",
+    unit: null,
+    prefix: null,
+    firstName: "",
+    middleName: "",
+    lastName: "",
+    gender: "",
+    dateOfBirth: null,
+    age: 0,
+    years: 0,
+    months: 0,
+    days: 0,
+    ISD: null,
+    phone: "",
+    IdentificationDoc: null,
+    idDocNo: "",
+    patientCat: null,
+    bookingSrc: null,
+    typeApt: null,
+    complaintRemark: "",
+    refType: null,
+    refName: null,
+    dept: null,
+    subDepart: null,
+    doct: null,
+    apptDate: null,
+  };
+
   const {
     register,
     handleSubmit,
@@ -81,44 +110,19 @@ const Form = () => {
     formState: { errors },
     reset,
   } = useForm({
-    defaultValue: {
-      patientPhone: "",
-      unit: null,
-      prefix: null,
-      firstName: "",
-      middleName: "",
-      lastName: "",
-      gender: "",
-      dateOfBirth: null,
-      age: 0,
-      years: 0,
-      months: 0,
-      days: 0,
-      ISD: null,
-      phone: "",
-      IdentificationDoc: null,  
-      idDocNo: "",
-      patientCat: null,
-      bookingSrc: null,
-      typeApt: null,
-      complaintRemark: "",
-      refType: null,
-      refName: null,
-      dept: null,
-      subDepart: null,
-      doct: null,
-      apptDate: null,
-    },
     mode: "onChange",
     resolver: yupResolver(validationSchema),
+    defaultValues,
   });
 
   // useEffect(() => {
   //   console.log("values is ", errors);
   // }, [errors]);
 
-  const onSubmit = (data) => console.log(data);
-
+  const onSubmit = (data) => {
+    reset(defaultValues);
+    console.log(data);
+  };
 
   return (
     <div className="min-h-screen bg-[#ECEFF1]">
@@ -284,38 +288,17 @@ const Form = () => {
                           <RadioGroup row {...field}>
                             <FormControlLabel
                               value="male"
-                              control={
-                                <Radio
-                                  size="small"
-                                  {...register("gender", {
-                                    required: true,
-                                  })}
-                                />
-                              }
+                              control={<Radio size="small" />}
                               label="Male"
                             />
                             <FormControlLabel
                               value="female"
-                              control={
-                                <Radio
-                                  size="small"
-                                  {...register("gender", {
-                                    required: true,
-                                  })}
-                                />
-                              }
+                              control={<Radio size="small" />}
                               label="Female"
                             />
                             <FormControlLabel
                               value="other"
-                              control={
-                                <Radio
-                                  size="small"
-                                  {...register("gender", {
-                                    required: true,
-                                  })}
-                                />
-                              }
+                              control={<Radio size="small" />}
                               label="Other"
                             />
                           </RadioGroup>
@@ -326,7 +309,7 @@ const Form = () => {
                       </FormControl>
                     )}
                   />
-                  <div className='mb-3'>
+                  <div className="mb-3">
                     <Controller
                       name="dateOfBirth"
                       defaultValue={valueDob}
@@ -862,35 +845,8 @@ const Form = () => {
                     sx={{ textTransform: "none" }}
                     size="small"
                     onClick={() => {
-                  reset({
-                    patientPhone: "",
-                    unit: null,
-                    prefix: null,
-                    firstName: "",
-                    middleName: "",
-                    lastName: "",
-                    gender: "",
-                    dateOfBirth: null,
-                    age: 0,
-                    years: 0,
-                    months: 0,
-                    days: 0,
-                    ISD: null,
-                    phone: "",
-                    IdentificationDoc: null,
-                    idDocNo: "",
-                    patientCat: null,
-                    bookingSrc: null,
-                    typeApt: null,
-                    complaintRemark: "",
-                    refType: null,
-                    refName: null,
-                    dept: null,
-                    subDepart: null,
-                    doct: null,
-                    apptDate: null,
-                  });
-                }}
+                      reset(defaultValues);
+                    }}
                   >
                     Reset
                   </Button>

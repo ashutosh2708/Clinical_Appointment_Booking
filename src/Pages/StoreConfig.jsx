@@ -227,69 +227,71 @@ const StoreConfig = () => {
                   </FormGroup>
                 </div>
               </div>
-              <Box
-                sx={{
-                  width: "100%",
-                }}
-              >
-                <Paper sx={{ width: "100%", mb: 2 }}>
-                  <TableContainer>
-                    <Table
+              <div className="grid w-[100%] border">
+                <Box sx={{ width: "100%", overflow: "hidden" }}>
+                  <Paper sx={{ width: "100%" }}>
+                    <TableContainer
                       sx={{
-                        minWidth: 750,
-                        border: 1,
-                        borderColor: "grey.400",
-                        borderRadius: 1,
+                        width: "auto",
                       }}
-                      size="small"
-                      aria-label="a dense table"
                     >
-                      <TableHead>
-                        <TableRow
-                          sx={{
-                            bgcolor: "#eeeeee",
-                          }}
-                        >
-                          {headers.map((header, index) => (
-                            <TableCell sx={{ fontWeight: 600 }} key={index}>
-                              {header}
-                            </TableCell>
-                          ))}
-                        </TableRow>
-                      </TableHead>
-                      <TableBody>
-                        {storeData.result.map((row, index) => (
-                          <TableRow key={index}>
-                            {headers.map((header, i) => (
-                              <TableCell key={i}>
-                                {header === "Purchase Allow" ||
-                                header === "Indent Allow" ||
-                                header === "Indent To Main Unit" ? (
-                                  <Checkbox defaultChecked />
-                                ) : (
-                                  ""
-                                )}
-                                <span>{row[header]}</span>
+                      <Table
+                        sx={{
+                          minWidth: 750,
+                          border: 1,
+                          borderColor: "grey.400",
+                          borderRadius: 1,
+                        }}
+                        size="small"
+                        aria-label="a dense table"
+                      >
+                        <TableHead>
+                          <TableRow
+                            sx={{
+                              bgcolor: "#eeeeee",
+                            }}
+                          >
+                            {headers.map((header, index) => (
+                              <TableCell sx={{ fontWeight: 600 }} key={index}>
+                                {header}
                               </TableCell>
                             ))}
                           </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  </TableContainer>
-                </Paper>
-                <div className="flex justify-end my-6">
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="success"
-                    sx={{ textTransform: "none" }}
-                    size="small"
-                  >
-                    Save
-                  </Button>
-                </div>
-              </Box>
+                        </TableHead>
+                        <TableBody>
+                          {storeData.result.map((row, index) => (
+                            <TableRow key={index}>
+                              {headers.map((header, i) => (
+                                <TableCell key={i}>
+                                  {header === "Purchase Allow" ||
+                                  header === "Indent Allow" ||
+                                  header === "Indent To Main Unit" ? (
+                                    <Checkbox defaultChecked />
+                                  ) : (
+                                    ""
+                                  )}
+                                  <span>{row[header]}</span>
+                                </TableCell>
+                              ))}
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
+                  </Paper>
+                  <div className="flex justify-end my-6">
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      color="success"
+                      sx={{ textTransform: "none" }}
+                      size="small"
+                    >
+                      Save
+                    </Button>
+                  </div>
+                </Box>
+              </div>
             </div>
           </form>
         </Box>
