@@ -15,19 +15,10 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-// import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
-// import Form from "../Pages/Form";
-// import Dashboard from "../Pages/Dashboard";
-// import Contact from "../Pages/Contact";
-// // import Services from "../Pages/Services";
-// import Collapse from "@mui/material/Collapse";
-// import ExpandLess from "@mui/icons-material/ExpandLess";
-// import ExpandMore from "@mui/icons-material/ExpandMore";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
-// import StoreConfig from "../Pages/StoreConfig";
 import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -101,10 +92,6 @@ const SideNav = () => {
   const [isOpen, setIsOpen] = useState(true);
   const navigate = useNavigate();
 
-  // const handleListItemClick = (event, index) => {
-  //   setSelectedIndex(index);
-  // };
-
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -121,7 +108,7 @@ const SideNav = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Clinical Management
+            Clinical Appointment Booking
           </Typography>
         </Toolbar>
       </AppBar>
@@ -139,7 +126,6 @@ const SideNav = () => {
             onClick={() => {
               navigate("/");
             }}
-            // onClick={() => setMenudata("Dashboard")}
           >
             <ListItemButton
               sx={{
@@ -147,8 +133,6 @@ const SideNav = () => {
                 justifyContent: isOpen ? "initial" : "center",
                 px: 2.5,
               }}
-              // selected={selectedIndex === 1}
-              // onClick={(event) => handleListItemClick(event, 1)}
             >
               <ListItemIcon
                 sx={{
@@ -165,48 +149,6 @@ const SideNav = () => {
               />
             </ListItemButton>
           </ListItem>
-          {/* <ListItem disablePadding sx={{ display: "block" }} onClick={()=>{navigate("/form")}}>
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: isOpen ? "initial" : "center",
-                px: 2.5,
-              }}
-              // onClick={handleClick}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: isOpen ? 3 : "auto",
-                  justifyContent: "center",
-                }}
-              >
-                <EventAvailableIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Appointment"
-                sx={{ opacity: isOpen ? 1 : 0 }}
-              />
-              {isOpen ? <ExpandLess /> : <ExpandMore />}
-            </ListItemButton>
-            <Collapse in={isOpen} timeout="auto" unmountOnExit>
-              <List component="div" disablePadding>
-                <ListItemButton
-                  sx={{ pl: 4 }}
-                  // onClick={(event) => {
-                  //   setMenudata("Form");
-                  //   handleListItemClick(event, 2);
-                  // }}
-                  // selected={selectedIndex === 2}
-                >
-                  <ListItemIcon>
-                    <PersonAddAltIcon />
-                  </ListItemIcon>
-                  <ListItemText primary="Book Appointment" />
-                </ListItemButton>
-              </List>
-            </Collapse>
-          </ListItem> */}
 
           <ListItem
             disablePadding
@@ -245,7 +187,6 @@ const SideNav = () => {
             onClick={() => {
               navigate("/storeConfig");
             }}
-            // onClick={() => setMenudata("Store Configuration")}
           >
             <ListItemButton
               sx={{
@@ -253,8 +194,6 @@ const SideNav = () => {
                 justifyContent: isOpen ? "initial" : "center",
                 px: 2.5,
               }}
-              // selected={selectedIndex === 3}
-              // onClick={(event) => handleListItemClick(event, 3)}
             >
               <ListItemIcon
                 sx={{
@@ -277,7 +216,6 @@ const SideNav = () => {
             onClick={() => {
               navigate("/contact");
             }}
-            // onClick={() => setMenudata("Contact")}
           >
             <ListItemButton
               sx={{
@@ -285,8 +223,6 @@ const SideNav = () => {
                 justifyContent: isOpen ? "initial" : "center",
                 px: 2.5,
               }}
-              // selected={selectedIndex === 4}
-              // onClick={(event) => handleListItemClick(event, 4)}
             >
               <ListItemIcon
                 sx={{
@@ -309,7 +245,6 @@ const SideNav = () => {
             onClick={() => {
               navigate("/services");
             }}
-            // onClick={() => setMenudata("Services")}
           >
             <ListItemButton
               sx={{
@@ -317,8 +252,6 @@ const SideNav = () => {
                 justifyContent: isOpen ? "initial" : "center",
                 px: 2.5,
               }}
-              // selected={selectedIndex === 5}
-              // onClick={(event) => handleListItemClick(event, 5)}
             >
               <ListItemIcon
                 sx={{
