@@ -27,6 +27,7 @@ import PrescriptionModal from "../Components/PrescriptionModal";
 import ServicesModal from "../Components/ServicesModal";
 import { styled } from "@mui/material/styles";
 import SideNav from "../Components/SideNav";
+import Navbar from "../Components/Navbar";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -102,6 +103,7 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-[#ECEFF1]">
+    <Navbar/>
       <Box sx={{ display: "flex" }}>
         <SideNav />
         <Box component="main" sx={{ flexGrow: 1, p: 1 }}>

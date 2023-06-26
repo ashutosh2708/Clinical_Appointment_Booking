@@ -25,9 +25,9 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "../Schema/FormSchema";
 
-import Navbar from "../Components/Header";
 import Modal from "../Components/Modal";
 import SideNav from "../Components/SideNav";
+import Navbar from "../Components/Navbar";
 
 const { ValueContainer, Placeholder } = components;
 const CustomValueContainer = ({ children, ...props }) => {
@@ -126,14 +126,14 @@ const Form = () => {
 
   return (
     <div className="min-h-screen bg-[#ECEFF1]">
+            {/* Header section */}
+            <Navbar />
       <Box sx={{ display: "flex" }}>
         <SideNav />
         <Box component="main" sx={{ flexGrow: 1, p: 1 }}>
           <DrawerHeader />
 
           <div>
-            {/* Header section */}
-            <Navbar />
 
             {/* Patient Details */}
             <form onSubmit={handleSubmit(onSubmit)}>
