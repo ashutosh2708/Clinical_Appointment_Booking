@@ -23,7 +23,7 @@ export default function Dashboard() {
         <Box height={70} />
         <Box sx={{ display: "flex" }}>
           <SideNav />
-          <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+          <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12} lg={8}>
                 <Stack direction="row" spacing={2}>

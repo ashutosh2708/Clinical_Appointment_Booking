@@ -2,7 +2,7 @@ import create from "zustand";
 import { persist } from "zustand/middleware";
 
 let appStore = (set) => ({
-  dopen: true,
+  dopen: false,
   rows: [],
   setRows: (rows) => set((state) => ({ rows: rows })),
   updateDopen: (dopen) => set((state) => ({ dopen: dopen })),
