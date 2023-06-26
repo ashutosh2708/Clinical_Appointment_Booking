@@ -1,3 +1,7 @@
+# Clinical Appointment Booking
+# Screenshot
+![Screenshot (226)](https://github.com/ashutosh2708/Clinical_Appointment_Booking/assets/105096433/be0aa67d-d89b-4ba4-b54c-a6976798f8ee)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
