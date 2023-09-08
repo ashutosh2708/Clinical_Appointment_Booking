@@ -70,9 +70,6 @@ export default function SideNav() {
   return (
     <Drawer variant="permanent" open={open}>
       <DrawerHeader>
-        {/* <IconButton onClick={() => setOpen(!open)}>
-         <MenuIcon />
-        </IconButton> */}
       </DrawerHeader>
       <List>
         <ListItem

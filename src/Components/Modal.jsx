@@ -52,7 +52,6 @@ const Modal = () => {
               <RadioGroup
                 row
                 aria-labelledby="demo-row-radio-buttons-group-label"
-                name="row-radio-buttons-group"
               >
                 <FormControlLabel
                   value="selected"
