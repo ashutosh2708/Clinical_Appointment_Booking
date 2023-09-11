@@ -24,14 +24,8 @@ const ComplaintModal = () => {
     };
   
     const {
-      // handleSubmit,
       control,
-      // formState: { errors },
     } = useForm({
-      // defaultValue: {
-      //   unit: null,
-      //   storeName: null,
-      // },
       mode: "onChange",
       resolver: yupResolver(validationSchema),
     });
