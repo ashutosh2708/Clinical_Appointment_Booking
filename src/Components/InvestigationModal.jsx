@@ -30,14 +30,8 @@ const InvestigationModal = () => {
   };
 
   const {
-    // handleSubmit,
     control,
-    // formState: { errors },
   } = useForm({
-    // defaultValue: {
-    //   unit: null,
-    //   storeName: null,
-    // },
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
@@ -76,8 +70,6 @@ const InvestigationModal = () => {
                   <RadioGroup row
                     aria-labelledby="demo-controlled-radio-buttons-group"
                     name="controlled-radio-buttons-group"
-                    // value={value}
-                    // onChange={handleChange}
                   >
                     <FormControlLabel
                       value="Pathology"
@@ -126,7 +118,6 @@ const InvestigationModal = () => {
                   variant="contained"
                   sx={{ textTransform: "none" }}
                   style={{ backgroundColor: "#0B83A5" }}
-                  // size="small"
                 >
                   Add
                 </Button>

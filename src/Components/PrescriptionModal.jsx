@@ -34,14 +34,8 @@ const PrescriptionModal = () => {
   };
 
   const {
-    // handleSubmit,
     control,
-    // formState: { errors },
   } = useForm({
-    // defaultValue: {
-    //   unit: null,
-    //   storeName: null,
-    // },
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
@@ -108,7 +102,6 @@ const PrescriptionModal = () => {
               </div>
               <div>
                 <Controller
-                  name=""
                   render={({ field }) => {
                     return (
                       <Select
@@ -134,7 +127,6 @@ const PrescriptionModal = () => {
               </div>
               <div>
                 <Controller
-                  name=""
                   render={({ field }) => {
                     return (
                       <Select

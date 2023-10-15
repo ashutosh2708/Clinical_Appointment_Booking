@@ -25,14 +25,8 @@ const DocumentsModal = () => {
   };
 
   const {
-    // handleSubmit,
     control,
-    // formState: { errors },
   } = useForm({
-    // defaultValue: {
-    //   unit: null,
-    //   storeName: null,
-    // },
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
@@ -66,17 +60,14 @@ const DocumentsModal = () => {
               <div className="md:flex gap-3">
                 <div className="w-72 mb-2">
                   <TextField
-                    name=""
                     fullWidth
                     size="small"
-                    id=""
                     variant="outlined"
                     label="Document Name *"
                   />
                 </div>
                 <div className="w-72 mb-2">
                   <Controller
-                    name=""
                     render={({ field }) => {
                       return (
                         <Select

@@ -58,7 +58,6 @@ const AllergiesModal = () => {
             <div className="md:flex gap-3 md:mx-16">
               <div className="flex-1 mb-2">
                 <Controller
-                  name=""
                   render={({ field }) => {
                     return (
                       <Select
@@ -86,7 +85,6 @@ const AllergiesModal = () => {
               </div>
               <div className="flex-1 mb-2">
                 <TextField
-                  name=""
                   fullWidth
                   size="small"
                   id=""
@@ -100,7 +98,6 @@ const AllergiesModal = () => {
                   variant="contained"
                   sx={{ textTransform: "none" }}
                   style={{ backgroundColor: "#0B83A5" }}
-                  // size="small"
                 >
                   Add
                 </Button>
